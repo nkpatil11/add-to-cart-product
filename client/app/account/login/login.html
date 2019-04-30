@@ -1,0 +1,67 @@
+<div class="row border-bottom white-bg dashboard-header ">
+  <toaster-container></toaster-container>
+  <div class="row ibox-content">
+    <div class="loginColumns">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="col-sm-12 text-center">
+            <h2>Sign Up</h2>
+          </div>
+          <div class="ibox-content">
+            <form class="form" name="form">
+              <div class="form-group">
+                <label>Name</label>
+                <input type="text" name="neme" class="form-control" ng-model="new_user.name" required>
+              </div>
+              <div class="form-group">
+                <label>Email</label>
+                <input type="email" name="email" class="form-control" ng-model="new_user.email_address" required>
+              </div>
+              <div class="form-group">
+                <label>Password</label>
+                <input type="password" name="password" class="form-control" ng-model="new_user.password" required>
+              </div>
+              <div>
+                <button class="btn btn-success block full-width m-b" ng-click="userSignUp()">Sign Up</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="col-sm-12 text-center">
+            <h2>Login</h2>
+          </div>
+          <div class="ibox-content">
+            <form class="form" name="form" ng-submit="login(form)" novalidate>
+              <div class="form-group">
+                <label>Email</label>
+                <input type="email" name="email" class="form-control" ng-model="user.email_address" required>
+              </div>
+              <div class="form-group">
+                <label>Password</label>
+                <input type="password" name="password" class="form-control" ng-model="user.password" required>
+              </div>
+              <div class="form-group has-error">
+                <p class="help-block" ng-show="form.email.$error.required && form.password.$error.required && submitted">
+                  Please enter your email and password.
+                </p>
+                <p class="help-block" ng-show="form.email.$error.email && submitted">
+                  Please enter a valid email.
+                </p>
+                <p class="help-block" ng-show="form.password.$error.required && submitted">
+                  Incorrect password.
+                </p>
+              </div>
+              <div>
+                <button class="btn btn-success block full-width m-b" type="submit">Login</button>
+                <a href="">
+                  <small>Forgot password?</small>
+                </a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

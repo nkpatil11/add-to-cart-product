@@ -1,0 +1,35 @@
+<toaster-container></toaster-container>
+<div ng-include="'app/navbar/navbar.html'"></div>
+<div class="col-sm-12 text-center">
+	<h2>Products</h2>
+	<h3 class="pull-right" style="color:red">Cart {{cart_items.length}}</h3>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-content">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+								<th>#</th>
+                                <th>Image</th>
+                                <th>Product Name</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="product in products | orderBy:'name'">
+								<td>{{$index+1}}</td>
+								<td><input ng-change="addToCart()" type="checkbox" ng-model="product.Selected"/> &nbsp;<img src="{{product.image}}" width="70px" height="70px"></td>
+                                <td>{{product.name}}</td>
+                                <td>${{product.price}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+				</div>
+				<button class="btn btn-primary pull-right" ng-click="proceedToPay()">Proceed To Pay</button>
+            </div>
+        </div>
+    </div>
+</div>
