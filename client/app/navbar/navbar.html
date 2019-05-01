@@ -1,0 +1,24 @@
+<nav class="navbar navbar-default" style="background-color: black" ng-controller="navbarController">
+    <div class="container">
+        <ul class="nav navbar-nav navbar-right">
+            <li ng-show="isLoggedIn">
+                <a href="#home">
+                    <i class="fa fa-home"></i>Home</a>
+            </li>
+            <li ng-show="isLoggedIn">
+                <a href="#product/list">Products</a>
+            </li>
+            <li ng-show="isLoggedIn">
+                <a href="#settings">
+                    <span class="glyphicon glyphicon-cog"></span>
+                </a>
+            </li>
+            <li ng-hide="isLoggedIn">
+                <a href="#login">Login</a>
+            </li>
+            <li ng-show="isLoggedIn">
+                <a href="" ng-click="logout()">Logout</a>
+            </li>
+        </ul>
+    </div>
+</nav>

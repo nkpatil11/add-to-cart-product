@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html ng-app="mynewtask">
+
+<head>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/2.2.0/toaster.css" />
+	<link rel="stylesheet" href="app/css/style.css">
+	
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-animate.js"></script>
+	<script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.13.3.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+	<script type="text/javascript" src='https://rawgithub.com/gsklee/ngStorage/master/ngStorage.js'></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/2.2.0/toaster.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular-cookies.js"></script>
+
+	<script src="app/app.js"></script>
+	<script src="app/home/home.controller.js"></script>
+	<script src="app/home/home.js"></script>
+	
+	<script src="app/navbar/navbar.controller.js"></script>
+	<script src="services/user.services.js"></script>
+	
+	<script src="services/auth.service.js"></script>
+	<script src="app/account/account.js"></script>
+	<script src="app/account/login/login.controller.js"></script>
+	<script src="app/account/settings/settings.controller.js"></script>
+	<script src="app/product/product.controller.js"></script>
+	<script src="app/product/product.js"></script>
+	<script src="services/product.services.js"></script>
+	<script src="app/product/payment/payment.controller.js"></script>
+</head>
+
+<body ng-controller="mainController" style="background-color: white">
+	<div id="main">
+		<div ng-view></div>
+	</div>
+</body>
+
+</html>
