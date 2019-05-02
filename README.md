@@ -6,8 +6,11 @@ Steps for run app.
 Step 1 : npm install.
 
 Step 2 : Replace with your stripe SECRET KEY and PublishableKey in config file (see file path below).
+
        Config file path:
+
        1. /client/services/config.js
+
        2. /server/config/environment/index.js
 
 Step 3 : npm start OR node app.js.
