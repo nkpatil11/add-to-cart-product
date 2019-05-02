@@ -5,7 +5,12 @@ angular.module('mynewtask').factory('ProductService', function ($http) {
         return $http.get('/api/products');
     };
 
+    var payNow = function (token) {
+        return $http.post('/api/products/paynow', token);
+    };
+
     return {
-        getAllProducts: getAllProducts
+        getAllProducts: getAllProducts,
+        payNow: payNow
     };
 });

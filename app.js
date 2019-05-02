@@ -13,7 +13,7 @@ mongoose.connect(config.mongo.url);
 if (config.seedDB) { require('./server/config/seed/seed'); }
 
 // configuration ===============================================================
-app.use(express.static('./client')); 
+app.use(express.static('./client'));
 
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({

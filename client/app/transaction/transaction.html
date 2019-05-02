@@ -1,0 +1,37 @@
+<div ng-include="'app/navbar/navbar.html'"></div>
+<div class="col-sm-12 text-center">
+	<h2>Transactions</h2>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-content">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+								<th>#</th>
+                                <th>Email</th>
+                                <th>Product Quantity</th>
+                                <th>Price</th>
+                                <th>Status</th>
+                                <th>Transaction Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="transaction in transactions | orderBy:'-created_date'">
+								<td>{{$index+1}}</td>								
+                                <td>{{transaction.email_address}}</td>
+                                <td>{{transaction.quantity}}</td>
+                                <td>${{transaction.price}}</td>
+                                <td>{{transaction.status}}</td>
+                                <td>{{transaction.created_date | date:'dd-MM-yyyy hh:mm a'}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h3 ng-if="transactions.length==0">Transactions not found.</h3>
+            </div>
+        </div>
+    </div>
+</div>

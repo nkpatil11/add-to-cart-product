@@ -14,7 +14,20 @@ var all = {
     },
     expires: {
         expiresIn: '2h'
-    }
+    },
+
+    // replace with your email-smtp credential
+    accessKeyId: 'your_access_key_id',
+    secretAccessKey: 'your_secret_access_key',
+    serviceUrl: 'serviceurl.com',
+
+    // replace with your email which have access to send email by nodemailer
+    email: {
+        from: 'your@mail.com'
+    },
+
+    // replace with your stripe SECRET KEY
+    keySecret: 'sk_test_xxxxxxxxxxxxxYourKeySecret'
 };
 
 module.exports = all;

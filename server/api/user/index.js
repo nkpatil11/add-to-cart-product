@@ -21,4 +21,28 @@ router.post('/password/change', auth.isAuthenticated(), function (req, res) {
     });
 });
 
+router.post('/forgot', function (req, res) {
+    controller.forgotPassword(req).then(function (data) {
+        res.json(data);
+    }).catch(function (error) {
+        res.statusCode(error.status).send(error);
+    });
+});
+
+router.get('/ref/:ref/verify/:token', function (req, res) {
+    controller.verifyToken(req).then(function (data) {
+        res.json(data);
+    }).catch(function (error) {
+        res.statusCode(error.status).send(error);
+    });
+});
+
+router.post('/ref/:ref/reset/:token', function (req, res) {
+    controller.resetPassword(req).then(function (data) {
+        res.json(data);
+    }).catch(function (error) {
+        res.statusCode(error.status).send(error);
+    });
+});
+
 module.exports = router;

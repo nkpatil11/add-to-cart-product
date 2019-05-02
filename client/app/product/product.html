@@ -28,7 +28,7 @@
                         </tbody>
                     </table>
 				</div>
-				<button class="btn btn-primary pull-right" ng-click="proceedToPay()">Proceed To Pay</button>
+				<button class="btn btn-primary pull-right" ng-click="proceedToPay()" ng-disabled="cart_items.length==0">Proceed To Pay</button>
             </div>
         </div>
     </div>

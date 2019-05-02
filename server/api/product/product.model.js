@@ -6,7 +6,7 @@ var ProductSchema = new Schema({
     name: String,
     price: Number,
     image: String,
-    created_date: { type: Date, default: Date.now },
-  });
+    created_date: {type: Date, default: Date.now}
+});
 
 module.exports = mongoose.model('Product', ProductSchema);

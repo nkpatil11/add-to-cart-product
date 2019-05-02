@@ -8,6 +8,7 @@ var UserSchema = new Schema({
     email_address: { type: String, lowercase: true },
     hashedPassword: String,
     salt: String,
+    resetPasswordTokenSalt: String,
     resetPasswordToken: String,
     resetPasswordExpires: Date,
     created_date: { type: Date, default: Date.now },

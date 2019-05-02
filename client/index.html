@@ -15,6 +15,8 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/2.2.0/toaster.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular-cookies.js"></script>
 
+	<script src="https://checkout.stripe.com/checkout.js"></script>
+
 	<script src="app/app.js"></script>
 	<script src="app/home/home.controller.js"></script>
 	<script src="app/home/home.js"></script>
@@ -25,11 +27,16 @@
 	<script src="services/auth.service.js"></script>
 	<script src="app/account/account.js"></script>
 	<script src="app/account/login/login.controller.js"></script>
+	<script src="app/account/settings/forgot.controller.js"></script>
+	<script src="app/account/settings/reset.controller.js"></script>
 	<script src="app/account/settings/settings.controller.js"></script>
 	<script src="app/product/product.controller.js"></script>
 	<script src="app/product/product.js"></script>
 	<script src="services/product.services.js"></script>
-	<script src="app/product/payment/payment.controller.js"></script>
+	<script src="services/config.js"></script>
+	<script src="app/transaction/transaction.controller.js"></script>
+	<script src="app/transaction/transaction.js"></script>
+	<script src="services/transaction.services.js"></script>
 </head>
 
 <body ng-controller="mainController" style="background-color: white">
